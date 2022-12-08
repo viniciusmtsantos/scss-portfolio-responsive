@@ -420,6 +420,11 @@ color: var(--title-color);
   transition: .4s;
 }
 
+.skills__list{
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
 .skills__titles{
   display: flex;
   justify-content: space-between;
@@ -470,6 +475,19 @@ color: var(--title-color);
   width: 60%;
 }
 
+.skills__css{
+  width: 80%;
+}
+
+.skills__close .skills__list{
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list{
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
 
 
 /*==================== QUALIFICATION ====================*/
