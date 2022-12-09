@@ -489,6 +489,10 @@ color: var(--title-color);
   margin-bottom: var(--mb-2-5);
 }
 
+.skills__open .skills__arrow{
+  transform: rotate(-180deg);
+}
+
 
 /*==================== QUALIFICATION ====================*/
 
