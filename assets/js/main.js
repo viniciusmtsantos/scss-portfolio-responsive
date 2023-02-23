@@ -1,9 +1,11 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
+
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
+
 /* Validate if constant exists */
 if(navToggle){
     navToggle.addEventListener('click', () =>{
@@ -12,6 +14,7 @@ if(navToggle){
 }
 
 /*===== MENU HIDDEN =====*/
+
 /* Validate if constant exists */
 if(navClose){
     navClose.addEventListener('click', () =>{
@@ -19,7 +22,24 @@ if(navClose){
     })
 }
 
+/*==================== SHOW MENU ====================*/
+
+// const showMenu = (toggleId, navId) =>{
+//     const toggle = document.getElementById(toggleId),
+//     nav = document.getElementById(navId)
+
+//     // Validate that variables exist
+//     if(toggle && nav){
+//         toggle.addEventListener('click', ()=>{
+//             // We add the show-menu class to the div tag with the nav__menu class
+//             nav.classList.toggle('show-menu')
+//         })
+//     }
+// }
+// showMenu('nav-toggle','nav-menu')
+
 /*==================== REMOVE MENU MOBILE ====================*/
+
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -30,6 +50,7 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
+
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header')
 
@@ -49,6 +70,7 @@ skillsHeader.forEach((el) =>{
 })
 
 /*==================== QUALIFICATION TABS ====================*/
+
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]')
 
@@ -69,6 +91,7 @@ tabs.forEach(tab =>{
 })
 
 /*==================== SERVICES MODAL ====================*/
+
 const modalViews = document.querySelectorAll('.services__modal'),
 modalBtns = document.querySelectorAll('.services__button'),
 modalCloses = document.querySelectorAll('.services__modal-close')
@@ -92,7 +115,8 @@ modalCloses.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-var swiper = new Swiper(".mySwiper", {
+
+let swiper = new Swiper(".mySwiper", {
     cssMode: true,
     loop: true,
     navigation: {
@@ -108,8 +132,25 @@ var swiper = new Swiper(".mySwiper", {
   });
 /*==================== TESTIMONIAL ====================*/
 
+let swiperTestimonial = new Swiper('.testimonial__container', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    Pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -176,4 +217,21 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home__data, .home__img,
+            .about__data, .about__img,
+            .services__content, .menu__content,
+            .app__data, .app__img,
+            .contact__data, .contact__button,
+            .footer__content`, {
+    interval: 200
 })
