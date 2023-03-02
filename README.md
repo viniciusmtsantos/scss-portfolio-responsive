@@ -1,4 +1,4 @@
-# Project Name
+# My Portfolio
 
 [Project Demo](https://viniciusmtsantos.github.io/scss-portfolio-responsive/)
 
