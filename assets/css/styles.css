@@ -7,11 +7,11 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 585; /* Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 584;/* Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color: hsl(var(--hue-color), 50%, 50%);
+    --first-color-second: hsl(var(--hue-color), 69%, 30%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -504,7 +504,7 @@ color: var(--title-color);
 
 .skills__bar,
 .skills__percentage{
-  height: 5px;
+  height: 2px;
   border-radius: .25rem;
 }
 
@@ -518,7 +518,7 @@ color: var(--title-color);
 }
 
 .skills__go{
-  width: 100%;
+  width: 80%;
 }
 
 .skills__node{
@@ -526,7 +526,7 @@ color: var(--title-color);
 }
 
 .skills__docker{
-  width: 0%;
+  width: 80%;
 }
 
 .skills__html{
@@ -534,11 +534,11 @@ color: var(--title-color);
 }
 
 .skills__vue{
-  width: 60%;
+  width: 80%;
 }
 
 .skills__js{
-  width: 60%;
+  width: 80%;
 }
 
 .skills__css{

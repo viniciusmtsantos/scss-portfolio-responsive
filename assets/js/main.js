@@ -143,7 +143,7 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     dynamicBullets: true,
     },
     breakpoints:{
-        568:{
+        600:{
             slidesPerView: 2,
         }
     }
@@ -235,3 +235,16 @@ sr.reveal(`.home__data, .home__img,
             .footer__content`, {
     interval: 200
 })
+
+// change language
+function changeLanguage() {
+    var langBtn = document.getElementById("lang-btn");
+    var lang = langBtn.innerHTML;
+    if (lang === "Change language") {
+      langBtn.innerHTML = "Mudar idioma";
+      // Change text to Portuguese
+    } else {
+      langBtn.innerHTML = "Change language";
+      // Change text back to English
+    }
+  }
